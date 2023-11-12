@@ -1,9 +1,31 @@
 # srlua_5.1_windows_x86
 Self-runnable Lua 5.1 pre-compiled binaries for Windows, for building Lua scripts into executable files. 
 
-DISCLAIMER: this is not my code, and I do not take credit for it. I'm uploading these binaries since the original source is no longer available (through conventional means), compiling from source is not possible on Windows (at the moment); and many Windows users (like me, who enjoy Lua) will find these tools of great use in their own projects.
+**DISCLAIMER:** this is not my code, and I do not take credit for it. I'm uploading these binaries since the original source is no longer available (through conventional means), compiling from source is not possible on Windows (at the moment); and many Windows users (like me, who enjoy Lua) will find these tools of great use in their own projects.
 
-Original README:
+## Description
+
+Self-runnable and glue binaries used in building Windows executable files from Lua script files. Recovered from an archived (not so easy to find) source. The "binaries" branch contains exclusively the binary files from the release folder, if you would rather skip importing the source code and get only the binaries to build your project.
+
+## Using: How to build an .exe file from a .lua source file?
+
+Paraprasing the original README: for each Lua program that you want to turn into a stand-alone program, do: 
+```
+glue.exe srlua.exe program.lua program.exe
+```
+Where:
++ glue.exe points to the location of the glue.exe binary file
++ srlua.exe points to the location of the srlua.exe binary file
++ program.lua points to the location of the Lua source file you want to compile
++ program.exe points to the location of the output executable file that will be created from your Lua source file, where "program" can be named freely and changed to whatever valid name, as desired.
+
+Note that by building an executable from a Lua file will not bundle imported modules into the executable. Imported modules must be present at the location specified in "require()" calls, though different implementations may be possible.
+
+## Building: Can I build the binaries from source?
+
+Great question. Every mirror of these source files provides detailed instructions about how to build the binaries in Linux; instructions for Windows remain unclear for me, and seemingly, for others too, as there is little-to-none information on the web about how to achieve this without facing numerous issues when attempting to adapt the Linux-based build files to a Windows setup. Feel free to let me know if you find a standardized step-by-step solution so I can share it here, too.
+
+## Original README:
 
 "This is a self-running Lua interpreter. It is meant to be combined with a
 Lua program (which may be in either text or precompiled form) into a single,
