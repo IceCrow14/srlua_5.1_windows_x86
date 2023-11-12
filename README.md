@@ -19,7 +19,7 @@ Where:
 + program.lua points to the location of the Lua source file you want to compile
 + program.exe points to the location of the output executable file that will be created from your Lua source file, where "program" can be named freely and changed to whatever valid name, as desired.
 
-Note that by building an executable from a Lua file will not bundle imported modules into the executable. Imported modules must be present at the location specified in "require()" calls, though different implementations may be possible.
+All four binary and DLL files must be located in the same directory. Also, note that by building an executable from a Lua file, imported modules will not be bundled into the executable. Imported modules must be present at the location specified in "require()" calls, though different implementations may be possible.
 
 ## Building: Can I build the binaries from source?
 
