@@ -9,7 +9,7 @@ Self-runnable and glue binaries used in building Windows executable files from L
 
 ## Using: How to build an .exe file from a .lua source file?
 
-Paraprasing the original README: for each Lua program that you want to turn into a stand-alone program, do: 
+Paraphrasing the original README: for each Lua program that you want to turn into a stand-alone program, do: 
 ```
 glue.exe srlua.exe program.lua program.exe
 ```
